@@ -219,8 +219,8 @@ namespace nanoFramework.Tools.NanoProfiler.CLRProfiler
             graph.graphType = Graph.GraphType.AllocationGraph;
             string title = "Allocation Graph for: " + _scenario;
             
-            GraphViewForm graphViewForm = new GraphViewForm(graph, title);
-            graphViewForm.Show();
+            //GraphViewForm graphViewForm = new GraphViewForm(graph, title);
+            //graphViewForm.Show();
 
         }
     }
