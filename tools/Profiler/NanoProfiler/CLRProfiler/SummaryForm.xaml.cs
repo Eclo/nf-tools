@@ -211,5 +211,17 @@ namespace nanoFramework.Tools.NanoProfiler.CLRProfiler
             
             histogramViewForm.Show();
         }
+
+        private void AllocationGraphButton_Click(object sender, RoutedEventArgs e)
+        {
+            Graph graph = _logResult.allocatedHistogram.BuildAllocationGraph(new FilterForm());
+
+            graph.graphType = Graph.GraphType.AllocationGraph;
+            string title = "Allocation Graph for: " + _scenario;
+            
+            GraphViewForm graphViewForm = new GraphViewForm(graph, title);
+            graphViewForm.Show();
+
+        }
     }
 }
