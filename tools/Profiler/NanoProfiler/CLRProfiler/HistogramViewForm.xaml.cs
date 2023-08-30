@@ -603,9 +603,9 @@ namespace nanoFramework.Tools.NanoProfiler.CLRProfiler
                 return;
             }
             
-            //Graphics g =  e.Graphics;
+            Graphics g =  e.Graphics;
 
-            //bucketWidth = BucketWidth(g);
+            bucketWidth = BucketWidth(g);
             bottomMargin = BottomMargin();
 
             BuildSizeRangesAndTypeTable(histogram.typeSizeStacktraceToCount);
@@ -634,7 +634,7 @@ namespace nanoFramework.Tools.NanoProfiler.CLRProfiler
             int width = leftMargin + buckets.Length * bucketWidth + (buckets.Length - 1) * gap + rightMargin;
             graphPanel.Width = width;
 
-            //DrawBuckets(g);
+            DrawBuckets(g);
 
             initialized = true;
         }
